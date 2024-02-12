@@ -1,1 +1,1 @@
-asdasd
+Обучение автотестам# KaspiAuto

@@ -23,8 +23,8 @@ public class HomeWorkOne {
 
     @Test
     void languages() {
-        homeWorkOne.languageJava.get(0).shouldHave(text("Java")).shouldHave(text("95.7%"));
-        homeWorkOne.languageHTML.get(1).shouldHave(text("HTML")).shouldHave(text("3.1%"));
-        homeWorkOne.languageJS.get(2).shouldHave(text("JavaScript")).shouldHave(text("1.2%"));
+        homeWorkOne.languageJava.shouldHave(text("95.7%"));
+        homeWorkOne.languageHTML.shouldHave(text("3.1%"));
+        homeWorkOne.languageJS.shouldHave(text("1.2%"));
     }
 }

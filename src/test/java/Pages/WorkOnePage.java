@@ -1,6 +1,7 @@
 package Pages;
 
 import com.codeborne.selenide.ElementsCollection;
+import com.codeborne.selenide.SelenideElement;
 
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Condition.visible;
@@ -8,9 +9,9 @@ import static com.codeborne.selenide.Selenide.*;
 import static com.codeborne.selenide.Selenide.$;
 
 public class WorkOnePage {
-    public ElementsCollection languageJava = $$("[data-ga-click='Repository, language stats search click, location:repo overview']");
-    public ElementsCollection languageHTML = $$("[data-ga-click='Repository, language stats search click, location:repo overview']");
-    public ElementsCollection languageJS = $$("[data-ga-click='Repository, language stats search click, location:repo overview']");
+    public SelenideElement languageJava = $("[href='/selenide/selenide/search?l=java']");
+    public SelenideElement languageHTML = $("[href='/selenide/selenide/search?l=html']");
+    public SelenideElement languageJS = $("[href='/selenide/selenide/search?l=javascript']");
     public ElementsCollection sizePeople = $$(".avatar.circle");
 
     public static void transitionToSelenide() {

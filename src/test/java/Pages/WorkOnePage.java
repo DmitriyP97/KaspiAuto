@@ -9,9 +9,9 @@ import static com.codeborne.selenide.Selenide.*;
 import static com.codeborne.selenide.Selenide.$;
 
 public class WorkOnePage {
-    public SelenideElement languageJava = $("[href='/selenide/selenide/search?l=java']");
-    public SelenideElement languageHTML = $("[href='/selenide/selenide/search?l=html']");
-    public SelenideElement languageJS = $("[href='/selenide/selenide/search?l=javascript']");
+    public SelenideElement languageJava = getLanguageElement("java");
+    public SelenideElement languageHTML = getLanguageElement("html");
+    public SelenideElement languageJS = getLanguageElement("javascript");
     public ElementsCollection sizePeople = $$(".avatar.circle");
 
     public static void transitionToSelenide() {
@@ -20,6 +20,7 @@ public class WorkOnePage {
         $("[href='/selenide/selenide']").should(visible).click();
     }
 
-
-
+    public SelenideElement getLanguageElement(String language) {
+        return $("[href='/selenide/selenide/search?l=" + language + "']");
+    }
 }
